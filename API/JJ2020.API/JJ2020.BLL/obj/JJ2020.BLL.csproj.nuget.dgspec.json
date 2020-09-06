@@ -29,6 +29,62 @@
         },
         "frameworks": {
           "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\andrew\\source\\repos\\JJ2020\\API\\JJ2020.API\\JJ2020.INFRA\\JJ2020.INFRA.csproj": {
+                "projectPath": "C:\\Users\\andrew\\source\\repos\\JJ2020\\API\\JJ2020.API\\JJ2020.INFRA\\JJ2020.INFRA.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\andrew\\source\\repos\\JJ2020\\API\\JJ2020.API\\JJ2020.INFRA\\JJ2020.INFRA.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\andrew\\source\\repos\\JJ2020\\API\\JJ2020.API\\JJ2020.INFRA\\JJ2020.INFRA.csproj",
+        "projectName": "JJ2020.INFRA",
+        "projectPath": "C:\\Users\\andrew\\source\\repos\\JJ2020\\API\\JJ2020.API\\JJ2020.INFRA\\JJ2020.INFRA.csproj",
+        "packagesPath": "C:\\Users\\andrew\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andrew\\source\\repos\\JJ2020\\API\\JJ2020.API\\JJ2020.INFRA\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\andrew\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
             "projectReferences": {}
           }
         },
