@@ -1,0 +1,14 @@
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\bin\Debug\netcoreapp2.1\JJ2020.API.deps.json
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\bin\Debug\netcoreapp2.1\JJ2020.API.runtimeconfig.json
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\bin\Debug\netcoreapp2.1\JJ2020.API.runtimeconfig.dev.json
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\bin\Debug\netcoreapp2.1\JJ2020.API.dll
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\bin\Debug\netcoreapp2.1\JJ2020.API.pdb
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\obj\Debug\netcoreapp2.1\JJ2020.API.csprojAssemblyReference.cache
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\obj\Debug\netcoreapp2.1\JJ2020.API.csproj.CoreCompileInputs.cache
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\obj\Debug\netcoreapp2.1\JJ2020.API.RazorAssemblyInfo.cache
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\obj\Debug\netcoreapp2.1\JJ2020.API.RazorAssemblyInfo.cs
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\obj\Debug\netcoreapp2.1\JJ2020.API.AssemblyInfoInputs.cache
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\obj\Debug\netcoreapp2.1\JJ2020.API.AssemblyInfo.cs
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\obj\Debug\netcoreapp2.1\JJ2020.API.RazorTargetAssemblyInfo.cache
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\obj\Debug\netcoreapp2.1\JJ2020.API.dll
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.API\obj\Debug\netcoreapp2.1\JJ2020.API.pdb
