@@ -208,6 +208,16 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "JJ2020.DOMAIN/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/JJ2020.DOMAIN.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JJ2020.DOMAIN.dll": {}
+        }
+      },
       "JJ2020.INFRA/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -691,6 +701,11 @@
         "netstandard.library.nuspec"
       ]
     },
+    "JJ2020.DOMAIN/1.0.0": {
+      "type": "project",
+      "path": "../JJ2020.DOMAIN/JJ2020.DOMAIN.csproj",
+      "msbuildProject": "../JJ2020.DOMAIN/JJ2020.DOMAIN.csproj"
+    },
     "JJ2020.INFRA/1.0.0": {
       "type": "project",
       "path": "../JJ2020.INFRA/JJ2020.INFRA.csproj",
@@ -699,6 +714,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "JJ2020.DOMAIN >= 1.0.0",
       "JJ2020.INFRA >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
@@ -733,6 +749,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\Users\\andrew\\source\\repos\\JJ2020\\API\\JJ2020.API\\JJ2020.DOMAIN\\JJ2020.DOMAIN.csproj": {
+              "projectPath": "C:\\Users\\andrew\\source\\repos\\JJ2020\\API\\JJ2020.API\\JJ2020.DOMAIN\\JJ2020.DOMAIN.csproj"
+            },
             "C:\\Users\\andrew\\source\\repos\\JJ2020\\API\\JJ2020.API\\JJ2020.INFRA\\JJ2020.INFRA.csproj": {
               "projectPath": "C:\\Users\\andrew\\source\\repos\\JJ2020\\API\\JJ2020.API\\JJ2020.INFRA\\JJ2020.INFRA.csproj"
             }

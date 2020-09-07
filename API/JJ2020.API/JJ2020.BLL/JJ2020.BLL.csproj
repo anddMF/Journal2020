@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JJ2020.DOMAIN\JJ2020.DOMAIN.csproj" />
     <ProjectReference Include="..\JJ2020.INFRA\JJ2020.INFRA.csproj" />
   </ItemGroup>
 

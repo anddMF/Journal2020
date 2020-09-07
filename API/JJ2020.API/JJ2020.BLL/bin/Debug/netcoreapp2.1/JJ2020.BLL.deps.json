@@ -1,0 +1,77 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "JJ2020.BLL/1.0.0": {
+        "dependencies": {
+          "JJ2020.DOMAIN": "1.0.0",
+          "JJ2020.INFRA": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.1.1.0"
+        },
+        "runtime": {
+          "JJ2020.BLL.dll": {}
+        }
+      },
+      "JJ2020.DOMAIN/1.0.0": {
+        "runtime": {
+          "JJ2020.DOMAIN.dll": {}
+        }
+      },
+      "JJ2020.INFRA/1.0.0": {
+        "dependencies": {
+          "System.Data.SqlClient": "4.4.0.0"
+        },
+        "runtime": {
+          "JJ2020.INFRA.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.1.1.0": {
+        "runtime": {
+          "Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
+      "System.Data.SqlClient.Reference/4.4.0.0": {
+        "runtime": {
+          "System.Data.SqlClient.dll": {
+            "assemblyVersion": "4.4.0.0",
+            "fileVersion": "4.6.26606.5"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JJ2020.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JJ2020.DOMAIN/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JJ2020.INFRA/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/2.1.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Data.SqlClient.Reference/4.4.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
