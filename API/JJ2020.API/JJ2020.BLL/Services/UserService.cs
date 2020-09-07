@@ -52,7 +52,7 @@ namespace JJ2020.BLL.Services
         {
             var param = new Dictionary<string, object>
             {
-                { "@id", 0 },
+                { "@id", user.ID },
                 { "@id_theme", user.ID_THEME },
                 { "@id_country", user.ID_COUNTRY },
                 { "@email", user.EMAIL },
@@ -60,7 +60,7 @@ namespace JJ2020.BLL.Services
                 { "@name_user", user.NAME_USER },
                 { "@age", user.AGE },
                 { "@active", user.ACTIVE },
-                { "@dt_creation", user.DT_CREATION },
+                { "@dt_creation", user.ID == 0 ? DateTime.Now : user.DT_CREATION },
                 { "@url_photo", user.URL_PHOTO }
             };
 

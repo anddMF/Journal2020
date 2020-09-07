@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using JJ2020.BLL.Services;
+using JJ2020.DOMAIN.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -30,6 +31,38 @@ namespace JJ2020.API.Controllers
 
                 var svc = new NoteService(config);
                 var result = svc.GetNotes(id_user);
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult PostNotes(Note note)
+        {
+            try
+            {
+                var svc = new NoteService(config);
+                var result = svc.PostNote(note);
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut]
+        public IActionResult PutNotes(Note note)
+        {
+            try
+            {
+                var svc = new NoteService(config);
+                var result = svc.PostNote(note);
 
                 return Ok(result);
             }

@@ -130,7 +130,7 @@ namespace JJ2020.INFRA.Database
             catch (Exception ex)
             {
                 //TODO: tratamento exception
-                return null;
+                throw ex;
             }
         }
     }

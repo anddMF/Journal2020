@@ -51,6 +51,23 @@ namespace JJ2020.API.Controllers
         {
             try
             {
+                user.ID = 0;
+                var svc = new UserService(config);
+                var result = svc.PostUser(user);
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut]
+        public IActionResult PutUser([FromBody] User user)
+        {
+            try
+            {
                 var svc = new UserService(config);
                 var result = svc.PostUser(user);
 
