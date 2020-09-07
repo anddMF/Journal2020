@@ -11,22 +11,22 @@ namespace JJ2020.DOMAIN.Models
         public int ID { get; set; }
 
         [JsonProperty("id_theme")]
-        public int ID_THEME { get; set; }
+        public int? ID_THEME { get; set; }
 
         [JsonProperty("id_country")]
-        public int ID_COUNTRY { get; set; }
+        public int? ID_COUNTRY { get; set; }
 
         [JsonProperty("email")]
         public string EMAIL { get; set; }
 
-        [JsonProperty("password")]
+        [JsonProperty("u_password")]
         public string U_PASSWORD { get; set; }
 
         [JsonProperty("name_user")]
         public string NAME_USER { get; set; }
 
         [JsonProperty("age")]
-        public DateTime AGE { get; set; }
+        public DateTime? AGE { get; set; }
 
         [JsonProperty("active")]
         public bool ACTIVE { get; set; }

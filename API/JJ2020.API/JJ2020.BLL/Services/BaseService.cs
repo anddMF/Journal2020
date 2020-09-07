@@ -87,7 +87,7 @@ namespace JJ2020.BLL.Services
                     break;
 
                 case "DateTime":
-                    return Convert.ToDateTime("00/00/0000");
+                    return null;
                     break;
 
                 case "Boolean":

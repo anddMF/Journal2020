@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using JJ2020.BLL.Services;
+using JJ2020.DOMAIN.Models;
 using JJ2020.DOMAIN.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -38,6 +39,22 @@ namespace JJ2020.API.Controllers
 
                 return Ok(result);
 
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult PostUser([FromBody] User user)
+        {
+            try
+            {
+                var svc = new UserService(config);
+                var result = svc.PostUser(user);
+
+                return Ok(result);
             }
             catch (Exception ex)
             {
