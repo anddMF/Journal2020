@@ -79,7 +79,7 @@ namespace JJ2020.BLL.Services
             switch (type)
             {
                 case "Int32":
-                    return int.MinValue;
+                    return 0;
                     break;
 
                 case "String":
@@ -87,7 +87,7 @@ namespace JJ2020.BLL.Services
                     break;
 
                 case "DateTime":
-                    return DateTime.MinValue;
+                    return Convert.ToDateTime("00/00/0000");
                     break;
 
                 case "Boolean":

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using JJ2020.BLL.Services;
+using JJ2020.DOMAIN.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -20,16 +21,17 @@ namespace JJ2020.API.Controllers
             config = _config;
         }
 
-        [HttpGet]
-        public IActionResult GetUser( string email, string password)
+        [HttpPost]
+        [Route("/auth")]
+        public IActionResult GetUser([FromBody] UserViewModel user)
         {
             try
             {
-                if (String.IsNullOrEmpty(email) || String.IsNullOrEmpty(password))
+                if (String.IsNullOrEmpty(user.email) || String.IsNullOrEmpty(user.password))
                     return BadRequest("invalid parameters");
 
                 var svc = new UserService(config);
-                var result = svc.GetUser(email, password);
+                var result = svc.GetUser(user.email, user.password);
 
                 if (result.Count() < 1)
                     return NotFound();
