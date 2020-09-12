@@ -1,0 +1,23 @@
+<div id="notification-container" class=" notification-top-right ">
+    ioioioi
+    <div *ngFor="let alert of alerts; let indexAlert = index" class="" style="background-color: aqua;">
+      <!-- <div id="collapse-{{ indexAlert }}" class="panel-wrapper collapse notification-text">
+        <div class="panel-body">
+          {{ alert.message }}
+        </div>
+      </div> -->
+      <a (click)="removeAlert(alert)" style="float:right !important" class="btn btn-{{ cssClass(alert) }} btn-xs ">
+        <i class="fa fa-times"></i>
+      </a>
+      <input id="collapsible" class="toggle bg-{{ cssClass(alert) }} " type="checkbox">
+      <label for="collapsible" class="lbl-toggle bg-{{ cssClass(alert) }} ">{{ alert.title }}</label>
+      
+      <div class="collapsible-content ">
+        <div class="content-inner">
+          <p>
+            {{ alert.message }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
