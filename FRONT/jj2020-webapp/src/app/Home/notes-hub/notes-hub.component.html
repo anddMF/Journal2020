@@ -1,24 +1,32 @@
-<div class="container col-12 mt-5 mb-5 p-5 bg-primary text-center text-light" style="width: 100vh !important;">
-    <h1>{{userMock.name_user}}</h1>
+<div class="container col-12 mt-5 mb-5 p-5 text-center text-light" style="width: 100vh !important;">
+    <h1 style="font-size: 4rem;">{{userMock.name_user}}</h1>
 </div>
 
-<div class="mt-5 bg-secondary p-2">
+<div class="mt-5 p-2">
     <div>
-        <h3>Favoritos</h3>
+        <h4 class="title-line">Favoritos</h4>
     </div>
 
     <div class="mt-3 p-2 ">
         <div class="row">
-            <div *ngFor="let note of listNotesFavorites" class="bg-primary text-light shadow rounded p-3 ml-3">
-                <h4>{{note.title}}</h4>
-
-                <textarea [(ngModel)]="note.note_text" name="text" id="text" cols="30" rows="10" class="text-light"
-                    style="background: #00ffff00; border: none;"></textarea>
-                <br>
-                <button class="btn btn-secondary mr-auto" (click)="updateNotes(note)" >salvar</button>
+            <div *ngFor="let note of listNotesFavorites" class="">
+                <app-note [noteInput]="note" [type]="typeCssF" ></app-note>
             </div>
         </div>
     </div>
 </div>
 
+<div class="mt-5 p-2">
+    <div>
+        <h4 class="title-line">Notas</h4>
+    </div>
+
+    <div class="mt-3 p-2 ">
+        <div class="row">
+            <div *ngFor="let note of listNotes" class="">
+                <app-note [noteInput]="note" [type]="typeCssC"></app-note>
+            </div>
+        </div>
+    </div>
+</div>
 {{listNotesFavorites | json}}

@@ -1,0 +1,32 @@
+.bg-favorite {
+    background: #F2E52E !important;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.562);
+    border-radius: 29px;
+    color: #1A1A1A;
+}
+
+.bg-common {
+    background: #8684D9;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.562);
+    border-radius: 29px;
+    color: #FFFFFF;
+}
+
+.input-favorite {
+    background: #00ffff00;
+    border: none;
+}
+
+.titulo {
+    font-weight: bold;
+}
+
+.input-common {
+    background: #00ffff00;
+    color: white;
+    border: none;
+}
+
+.input-common textarea{
+
+}

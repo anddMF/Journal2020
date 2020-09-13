@@ -1,4 +1,3 @@
-import { BaseService } from './../../_services/base/base.service';
 import { NotesService } from './../../_services/notes/notes.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -17,7 +16,10 @@ export class NotesHubComponent implements OnInit {
   listNotesFavorites: Note[] = [];
   listStub: Note[] = [];
 
-  constructor(private svcNotes: NotesService, private svcBase: BaseService) {
+  typeCssF = 'favorite'
+  typeCssC = 'common'
+
+  constructor(private svcNotes: NotesService) {
     this.userMock = new User();
   }
 
@@ -30,7 +32,15 @@ export class NotesHubComponent implements OnInit {
   getNotes(){
     console.log('hub')
 
-    this.svcNotes.getNotes().subscribe(res => this.listNotesFavorites = res);
+    this.svcNotes.getNotes().subscribe(res => {
+      res.forEach(x => {
+        if(x.favorite){
+          this.listNotesFavorites.push(x)
+        } else {
+          this.listNotes.push(x)
+        }
+      })
+    } );
   }
 
   updateNotes(note: Note){

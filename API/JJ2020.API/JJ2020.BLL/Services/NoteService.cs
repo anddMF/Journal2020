@@ -61,7 +61,7 @@ namespace JJ2020.BLL.Services
                 { "@favorite", note.FAVORITE },
                 { "@tag", note.TAG },
                 { "@dt_creation", note.ID == 0 ? DateTime.Now : note.DT_CREATION },
-                { "@dt_edit", note.ID > 0 ? DateTime.Now : note.DT_EDIT }
+                { "@dt_edit", DateTime.Now }
             };
 
             if (note.ID_USER_SHARED == 0)

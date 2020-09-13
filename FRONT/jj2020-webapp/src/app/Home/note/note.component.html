@@ -1,0 +1,10 @@
+<div *ngIf="noteInput" class="bg-{{cssClass(type)}} col-md-10  p-3 ml-3 text-center" style="">
+    <h4 class="mx-auto"> <input type="text" class="input-{{cssClass(type)}} titulo" [(ngModel)]="noteInput.title"></h4>
+    <textarea [(ngModel)]="noteInput.note_text" class="input-{{cssClass(type)}} mx-auto" name="text" id="text" cols="30" rows="8"
+        style=" font-size: 1rem;"></textarea>
+    <br>
+    <div class="row pr-3 pl-3 pt-2">
+        <button class="btn btn-secondary mr-auto" (click)="updateNote()" >salvar</button>
+        <h6 class="text-muted">{{ noteInput.dt_edit | date:"dd/MM/yy" }}</h6>
+    </div>
+</div>

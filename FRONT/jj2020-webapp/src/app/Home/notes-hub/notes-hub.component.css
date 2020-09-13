@@ -1,0 +1,7 @@
+.title-line{
+    color: #E0CFF9; 
+    writing-mode: vertical-rl; 
+    transform: rotate(-180deg); 
+    float: left; 
+    margin-top: 10%;
+}

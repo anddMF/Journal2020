@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotifyComponent } from './Home/shared/notify/notify.component';
 import { NotesHubComponent } from './Home/notes-hub/notes-hub.component';
+import { NoteComponent } from './home/note/note.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotifyComponent,
-    NotesHubComponent
+    NotesHubComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule,
