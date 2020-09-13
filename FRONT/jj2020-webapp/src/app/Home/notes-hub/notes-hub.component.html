@@ -1,0 +1,22 @@
+<div class="container col-12 p-5 bg-primary text-center text-light" style="width: 100vh !important;">
+    <h1>{{userMock.name_user}}</h1>
+</div>
+
+<div class="mt-5 bg-secondary p-2">
+    <div>
+        <h3>Favoritos</h3>
+    </div>
+
+    <div class="mt-3 p-2 ">
+        <div class="row">
+            <div *ngFor="let note of listNotesFavorites" class="bg-primary text-light shadow rounded p-3 ml-3" >
+                <h4>{{note.title}}</h4>
+
+                <textarea [(ngModel)]="note.note_text" name="text" id="text" cols="30" rows="10" class="text-light" style="background: #00ffff00; border: none;" ></textarea>
+                <p>{{note.note_text}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{listNotesFavorites | json}}

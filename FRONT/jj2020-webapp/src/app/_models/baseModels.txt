@@ -1,0 +1,42 @@
+  get notes: {
+    "id": 1,
+    "id_user": 3,
+    "id_user_shared": 0,
+    "title": "Titulo de teste",
+    "note_text": "<b>TESTETESTE 2</b>",
+    "active": true,
+    "favorite": false,
+    "tag": "",
+    "dt_creation": "2020-09-06T14:40:00.853",
+    "dt_edit": "0001-01-01T00:00:00",
+    "main_user": null,
+    "shared_user": null
+  }
+
+post notes  
+ "ID_USER": 0,
+  "ID_USER_SHARED": 0,
+  "TITLE": "string",
+  "NOTE_TEXT": "string",
+  "ACTIVE": true,
+  "FAVORITE": true,
+  "TAG": "string",
+
+user: 
+  "ID": 0,
+  "ID_THEME": 0,
+  "ID_COUNTRY": 0,
+  "EMAIL": "string",
+  "U_PASSWORD": "string",
+  "NAME_USER": "string",
+  "AGE": "2020-09-12T17:18:44.651Z",
+  "ACTIVE": true,
+  "DT_CREATION": "2020-09-12T17:18:44.651Z",
+  "URL_PHOTO": "string",
+  "NAME_COUNTRY": "string",
+
+  login: 
+  {
+  "email": "string",
+  "password": "string"
+}
