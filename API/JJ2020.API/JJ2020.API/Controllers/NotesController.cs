@@ -57,7 +57,8 @@ namespace JJ2020.API.Controllers
         }
 
         [HttpPut]
-        public IActionResult PutNotes(Note note)
+        [Route("/notes/{id_user}")]
+        public IActionResult PutNotes( [FromRoute] int id_user, [FromBody] Note note)
         {
             try
             {

@@ -33,6 +33,12 @@ export class NotesHubComponent implements OnInit {
     this.svcNotes.getNotes().subscribe(res => this.listNotesFavorites = res);
   }
 
+  updateNotes(note: Note){
+    console.log('hub update');
+    console.log(note)
+    this.svcNotes.updateNote(note).subscribe(() => console.log('subs update'));
+  }
+
   initiateUser() {
     this.userMock.id = 4;
     this.userMock.name_user = 'Andrew Moraes'
@@ -89,18 +95,6 @@ console.log(this.listStub)
         this.listNotes.push(note);
       }
     }
-
-    // this.listStub.forEach(note => {
-    //   console.log('entrou foreach');
-    //   console.log(note)
-    //   console.log(note.title)
-    //   if (note.favorite) {
-    //     console.log('favorite')
-    //     this.listNotesFavorites.push(note);
-    //   } else {
-    //     this.listNotes.push(note);
-    //   }
-    // })
     console.log(this.listNotesFavorites.length)
   }
 
