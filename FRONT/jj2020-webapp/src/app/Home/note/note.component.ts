@@ -11,12 +11,10 @@ import { NoteType } from 'src/app/_models/css-class.model';
 export class NoteComponent implements OnInit {
 
   @Input() noteInput: Note;
-  @Input() type: string;
+
   constructor(private svcNotes: NotesService) { }
 
   ngOnInit() {
-    console.log('component');
-    console.log(this.noteInput)
   }
 
   updateNote(){
@@ -25,18 +23,14 @@ export class NoteComponent implements OnInit {
     this.svcNotes.updateNote(this.noteInput).subscribe(() => console.log('subs update'));
   }
 
-  cssClass(tipo: string) {
-    if (!tipo){
-      return;
-    }
-
-    switch (tipo) {
-      case 'favorite':
+  cssClass() {
+    switch (this.noteInput.favorite) {
+      case true:
         return 'favorite';
-      case 'common':
+      case false:
         return 'common';
-      case '':
-        return 'default';
+      case null:
+        return 'common';
     }
   }
 

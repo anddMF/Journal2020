@@ -1,0 +1,24 @@
+<div class="container col-12 mt-5 mb-5 p-5 text-center text-light" style="width: 100vh !important;">
+    <button class="btn btn-sm" (click)="goBack()">voltar</button>
+    <h1 style="font-size: 4rem;">  <input type="text" class="input-common titulo" [(ngModel)]="newNote.title"> </h1>
+</div>
+
+<div class="container ">
+    <div class="bg-common p-4">
+        <div class="p-3 text-center">
+            <textarea [(ngModel)]="newNote.note_text" class="text-common text-area" name="text" id="text" cols="30" rows="8"></textarea>
+        </div>
+        <div class="row pr-4 pl-4">
+            <div class="form-check">
+                <input class="form-check-input" [(ngModel)]="newNote.favorite" type="checkbox"  value="" id="favorite" name="favorite">
+                <label class="form-check-label font-weight-bold" for="defaultCheck1">
+                  Favorito
+                </label>
+              </div>
+            <button class="btn btn-success ml-auto" (click)="salvar()" >salvar</button>
+        </div>
+    </div>
+
+</div>
+
+{{newNote | json}}

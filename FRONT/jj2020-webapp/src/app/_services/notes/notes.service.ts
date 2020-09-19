@@ -11,6 +11,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class NotesService {
+  // TODO: Variaveis globais em arquivo de ambiente
+
   listNotes: Observable<Note[]>;
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -21,15 +23,6 @@ export class NotesService {
 
   getNotes(): Observable<Note[]> {
     console.log('TEI')
-    // this.http.get<Note[]>('https://localhost:44368/api/Notes?id_user=3').pipe(res => {
-    //   console.log('resposta get notes');
-    //   console.log(res)
-    //   this.listNotes = res;
-    //   return this.listNotes;
-    // }, error => {
-    //   // console.error(error)
-    //   return error;
-    // });
 
     return this.http.get<Note[]>('https://localhost:44368/api/Notes?id_user=3').pipe(
       retry(2),
@@ -54,8 +47,12 @@ export class NotesService {
      )
   }
 
-  postNote() {
-
+  postNote(note: Note) {
+    return this.http.post('https://localhost:44368/api/Notes', note, this.httpOptions)
+    .pipe(
+      tap(_ => console.log('post post')),
+      catchError(this.handleError<any>('postNote'))
+    )
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

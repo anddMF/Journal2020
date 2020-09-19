@@ -1,0 +1,28 @@
+
+.titulo {
+    font-weight: bold;
+}
+
+.input-common {
+    background: #00ffff00;
+    color: white;
+    border: none;
+}
+
+.text-area{
+    font-size: 1rem;
+    width: 100%;
+    border: 2px !important;
+}
+
+.text-common {
+    background: #00ffff00;
+    color: white; 
+}
+
+.bg-common {
+    background: #8684D9;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.562);
+    border-radius: 29px;
+    color: #FFFFFF;
+}
