@@ -43,12 +43,6 @@ export class NotesHubComponent implements OnInit {
     } );
   }
 
-  updateNotes(note: Note){
-    console.log('hub update');
-    console.log(note)
-    this.svcNotes.updateNote(note).subscribe(() => console.log('subs update'));
-  }
-
   initiateUser() {
     this.userMock.id = 4;
     this.userMock.name_user = 'Andrew Moraes'

@@ -49,6 +49,8 @@ export class NotifyService {
   alert(type: AlertType, title: string = '', message: string, keepAfterRouteChange = true) {
     this.keepAfterRouteChange = keepAfterRouteChange;
     this.subject.next(<Alert>{ title: title, type: type, message: message });
+    console.log('SERVICE SUB')
+    console.log(this.subject[0])
   }
 
   clear() {

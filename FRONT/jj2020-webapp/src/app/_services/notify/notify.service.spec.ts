@@ -20,10 +20,11 @@ describe('NotifyService', () => {
     expect(service).toBeTruthy();
   });
 
-  // it('should do a subject.next after success', () => {
-  //   const service: NotifyService = TestBed.get(NotifyService);
+  it('should do a subject.next after success', () => {
+    const service: NotifyService = TestBed.get(NotifyService);
 
-  //   service.success('teste sucesso', 'mensagem');
-  //   console.log()
-  // })
+    service.success('teste sucesso', 'mensagem');
+    console.log('subjecccct');
+    console.log(service['subject'])
+  })
 });
