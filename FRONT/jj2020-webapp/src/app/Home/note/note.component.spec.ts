@@ -1,4 +1,9 @@
+import { By } from '@angular/platform-browser';
+import { NotesServiceStub } from './../../_services/notes/notes.service.mock';
+import { NotesService } from './../../_services/notes/notes.service';
+import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { NoteComponent } from './note.component';
 
@@ -8,7 +13,9 @@ describe('NoteComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NoteComponent ]
+      imports: [HttpClientModule, FormsModule],
+      declarations: [ NoteComponent ],
+      providers: [{ provide: NotesService, useClass: NotesServiceStub}]
     })
     .compileComponents();
   }));
@@ -19,7 +26,17 @@ describe('NoteComponent', () => {
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should call updateNote after click on button', () => {
+    const btn = fixture.debugElement.nativeElement.querySelector('.btn');
+    // const btn = fixture.debugElement.query(By.css('btn'));
+    // const btn = fixture.debugElement.nativeElement.querySelector('#usr-1')
+    console.log('butttttttton')
+    console.log(btn);
+
+    btn.click();
   });
 });

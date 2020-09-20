@@ -54,4 +54,5 @@ describe('NotesHubComponent', () => {
 
     expect(obj.childNodes[1].innerHTML).not.toBeNull();
   })
+
 });
