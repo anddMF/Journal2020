@@ -1,10 +1,11 @@
-<div class="container col-12 mt-5 mb-5 p-5 text-center text-light" style="width: 100vh !important;">
-    <button class="btn btn-sm" (click)="goBack()">voltar</button>
-    <h1 style="font-size: 4rem;">  <input type="text" class="input-common titulo" [(ngModel)]="newNote.title"> </h1>
-</div>
 
-<div class="container ">
+
+<div >
+
     <div class="bg-common p-4">
+        <div class="container col-12 mt-1 mb-5 p-5 text-center text-primary" style="width: 100vh !important;">
+            <h1 style="font-size: 4rem;">  <input type="text" class="input-common titulo text-light" [(ngModel)]="newNote.title"> </h1>
+        </div>
         <div class="p-3 text-center">
             <textarea [(ngModel)]="newNote.note_text" class="text-common text-area" name="text" id="text" cols="30" rows="8"></textarea>
         </div>
@@ -17,8 +18,9 @@
               </div>
             <button class="btn btn-success ml-auto" (click)="salvar()" >salvar</button>
         </div>
+        {{newNote | json}}
     </div>
 
 </div>
 
-{{newNote | json}}
+

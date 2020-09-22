@@ -10,6 +10,7 @@ import { NotifyComponent } from './Home/shared/notify/notify.component';
 import { NotesHubComponent } from './Home/notes-hub/notes-hub.component';
 import { NoteComponent } from './Home/note/note.component';
 import { NoteCreateComponent } from './Home/note-create/note-create.component';
+import { ModalComponent } from './Home/shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NoteCreateComponent } from './Home/note-create/note-create.component';
     NotifyComponent,
     NotesHubComponent,
     NoteComponent,
-    NoteCreateComponent
+    NoteCreateComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

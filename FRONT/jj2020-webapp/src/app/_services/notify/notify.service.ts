@@ -50,7 +50,7 @@ export class NotifyService {
     this.keepAfterRouteChange = keepAfterRouteChange;
     this.subject.next(<Alert>{ title: title, type: type, message: message });
     console.log('SERVICE SUB')
-    console.log(this.subject[0])
+    this.subject.asObservable().subscribe(t => console.log(t))
   }
 
   clear() {

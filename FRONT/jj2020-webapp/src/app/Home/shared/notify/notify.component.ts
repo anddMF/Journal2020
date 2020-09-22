@@ -31,7 +31,6 @@ export class NotifyComponent implements OnInit {
 
   ngOnInit() {
     this.svcNotify.getAlert().subscribe((alert: Alert) => {
-      this.logConsole('on init', alert)
       if (!alert) {
         this.alerts = [];
         return;

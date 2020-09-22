@@ -1,3 +1,4 @@
+import { Alert } from './../../_models/alert';
 import { NotesHubComponent } from './../../Home/notes-hub/notes-hub.component';
 import { TestBed } from '@angular/core/testing';
 import { AppRoutingModule } from 'src/app/app-routing.module';
@@ -22,9 +23,22 @@ describe('NotifyService', () => {
 
   it('should do a subject.next after success', () => {
     const service: NotifyService = TestBed.get(NotifyService);
-
+    let alertRes = new Alert();
+    // service['subject'].next(<Alert>{title: 'opa', message: 'opaopa', type: 0})
+    // console.log('subjecccct');
+    // service.getAlert().subscribe((t: Alert) => {
+    //   console.log('dentro obser')
+    //   console.log(t)
+    //   alertRes = t;
+    // })
     service.success('teste sucesso', 'mensagem');
-    console.log('subjecccct');
-    console.log(service['subject'])
+    service.getAlert().subscribe((t: Alert) => {
+      console.log('dentro obser')
+      console.log(t)
+      alertRes = t;
+    })
+    console.log(alertRes)
+    expect(alertRes.title).toBe('teste sucesso')
+
   })
 });

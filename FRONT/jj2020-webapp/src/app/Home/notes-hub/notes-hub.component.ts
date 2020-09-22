@@ -1,3 +1,4 @@
+import { ModalService } from './../../_services/modal/modal.service';
 import { NotesService } from './../../_services/notes/notes.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -19,7 +20,7 @@ export class NotesHubComponent implements OnInit {
   typeCssF = 'favorite'
   typeCssC = 'common'
 
-  constructor(private svcNotes: NotesService) {
+  constructor(private svcNotes: NotesService, private svcModal: ModalService) {
     this.userMock = new User();
   }
 
@@ -46,6 +47,14 @@ export class NotesHubComponent implements OnInit {
   initiateUser() {
     this.userMock.id = 4;
     this.userMock.name_user = 'Andrew Moraes'
+  }
+
+  openModal(id: string){
+    this.svcModal.open(id);
+  }
+
+  closeModal(id: string){
+    this.svcModal.close(id);
   }
 
 }

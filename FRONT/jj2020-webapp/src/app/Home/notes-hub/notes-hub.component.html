@@ -1,7 +1,8 @@
 <div class="container col-12 mt-5 mb-5 p-5 text-center text-light" style="width: 100vh !important;">
     <h1 style="font-size: 4rem;">{{userMock.name_user}}</h1>
 </div>
-<a routerLink="/newnote" class="btn btn-info">adicionar</a>
+<!-- <a routerLink="/newnote" class="btn btn-info">adicionar</a> -->
+<button class="btn btn-block btn-primary shadow" (click)="openModal('custom-modal-1')" >nova nota</button>
 <div class="mt-5 p-2">
     <div>
         <h4 class="title-line">Favoritos</h4>
@@ -30,3 +31,8 @@
     </div>
 </div>
 {{listNotesFavorites | json}}
+
+<app-modal id="custom-modal-1">
+    <app-note-create></app-note-create>
+    <!-- <button (click)="closeModal('custom-modal-1')" >close</button> -->
+</app-modal>
