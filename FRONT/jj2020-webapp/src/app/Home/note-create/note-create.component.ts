@@ -1,3 +1,4 @@
+import { ModalService } from './../../_services/modal/modal.service';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
@@ -12,7 +13,7 @@ import { NotesService } from 'src/app/_services/notes/notes.service';
 export class NoteCreateComponent implements OnInit {
 
   newNote: Note;
-  constructor(private svcNotes: NotesService, private location: Location) { 
+  constructor(private svcNotes: NotesService, private location: Location, private svcModal: ModalService) { 
     this.newNote = new Note();
     this.newNote.title = 'Nova nota';
     this.newNote.favorite = false;
@@ -25,10 +26,14 @@ export class NoteCreateComponent implements OnInit {
   }
 
   salvar(){
-    this.svcNotes.postNote(this.newNote).subscribe(() => this.goBack())
+    this.svcNotes.postNote(this.newNote).subscribe(() => this.closeModal())
   }
 
   goBack(){
     this.location.back();
+  }
+
+  closeModal(){
+    this.svcModal.close('create-modal')
   }
 }

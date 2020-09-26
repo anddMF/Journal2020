@@ -1,28 +1,31 @@
+import { ModalComponent } from './../shared/modal/modal.component';
+import { NoteCreateComponent } from 'src/app/Home/note-create/note-create.component';
 import { NoteComponent } from './../note/note.component';
+import { NotesHubComponent } from './notes-hub.component';
+
+
+import { ModalService } from './../../_services/modal/modal.service';
 import { NotesServiceStub } from './../../_services/notes/notes.service.mock';
 import { NotesService } from './../../_services/notes/notes.service';
+
 import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { NotesHubComponent } from './notes-hub.component';
 import { FormsModule } from '@angular/forms';
-import { By } from '@angular/platform-browser';
+import { BrowserModule, By } from '@angular/platform-browser';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 describe('NotesHubComponent', () => {
-  let fakeNote = {
-    
-  }
   let component: NotesHubComponent;
 
   let fixture: ComponentFixture<NotesHubComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule, FormsModule],
-      declarations: [ NotesHubComponent, NoteComponent ],
-      providers: [{ provide: NotesService, useClass: NotesServiceStub }]
+      imports: [HttpClientModule, FormsModule, BrowserModule, AppRoutingModule],
+      declarations: [NotesHubComponent, NoteComponent, NoteCreateComponent, ModalComponent],
+      providers: [{ provide: NotesService, useClass: NotesServiceStub }, ModalService]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
