@@ -1,3 +1,5 @@
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
 html, body {
     background: #6A12E8;
     height: 100vh;
@@ -44,3 +46,5 @@ app-modal .jw-modal-background {
     z-index: 900;
 }
 /* FIM modal */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

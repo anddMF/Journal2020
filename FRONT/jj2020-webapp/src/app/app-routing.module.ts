@@ -1,3 +1,4 @@
+import { NoteEditComponent } from './Home/note-edit/note-edit.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -8,7 +9,8 @@ import { NoteCreateComponent } from './Home/note-create/note-create.component';
 const routes: Routes = [
   { path: '', redirectTo: '/notes', pathMatch: 'full' },
   { path: 'notes', component: NotesHubComponent },
-  { path: 'newnote', component: NoteCreateComponent }
+  { path: 'newnote', component: NoteCreateComponent },
+  { path: 'edit', component: NoteEditComponent }
 ];
 
 @NgModule({

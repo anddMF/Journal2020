@@ -12,6 +12,17 @@ import { NoteComponent } from './Home/note/note.component';
 import { NoteCreateComponent } from './Home/note-create/note-create.component';
 import { ModalComponent } from './Home/shared/modal/modal.component';
 
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatToolbarModule,  
+  MatIconModule,  
+  MatCardModule,  
+  MatButtonModule,  
+  MatProgressBarModule } from '@angular/material';
+import { NoteEditComponent } from './Home/note-edit/note-edit.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +30,22 @@ import { ModalComponent } from './Home/shared/modal/modal.component';
     NotesHubComponent,
     NoteComponent,
     NoteCreateComponent,
-    ModalComponent
+    ModalComponent,
+    NoteEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
+    BrowserAnimationsModule,  
+    MatToolbarModule,  
+    MatIconModule,  
+    MatButtonModule,  
+    MatCardModule,  
+    MatProgressBarModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
