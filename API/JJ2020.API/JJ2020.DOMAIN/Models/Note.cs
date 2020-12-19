@@ -23,10 +23,10 @@ namespace JJ2020.DOMAIN.Models
         public string NOTE_TEXT { get; set; }
 
         [JsonProperty("active")]
-        public bool ACTIVE { get; set; }
+        public UInt64 ACTIVE { get; set; }
 
         [JsonProperty("favorite")]
-        public bool FAVORITE { get; set; }
+        public UInt64 FAVORITE { get; set; }
 
         [JsonProperty("tag")]
         public string TAG { get; set; }

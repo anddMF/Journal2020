@@ -41,8 +41,8 @@ namespace JJ2020.BLL.Services
         {
             var param = new Dictionary<string, object>
             {
-                { "@email", email },
-                { "@pass", password }
+                { "pEmail", email },
+                { "pPass", password }
             };
 
             return param;
@@ -52,16 +52,16 @@ namespace JJ2020.BLL.Services
         {
             var param = new Dictionary<string, object>
             {
-                { "@id", user.ID },
-                { "@id_theme", user.ID_THEME },
-                { "@id_country", user.ID_COUNTRY },
-                { "@email", user.EMAIL },
-                { "@u_password", user.U_PASSWORD },
-                { "@name_user", user.NAME_USER },
-                { "@age", user.AGE },
-                { "@active", user.ACTIVE },
-                { "@dt_creation", user.ID == 0 ? DateTime.Now : user.DT_CREATION },
-                { "@url_photo", user.URL_PHOTO }
+                { "pId", user.ID },
+                { "pId_theme", user.ID_THEME },
+                { "pId_country", user.ID_COUNTRY },
+                { "pEmail", user.EMAIL },
+                { "u_password", user.U_PASSWORD },
+                { "pName_user", user.NAME_USER },
+                { "age", user.AGE },
+                { "pActive", user.ACTIVE },
+                { "pDt_creation", user.ID == 0 ? DateTime.Now : user.DT_CREATION },
+                { "pUrl_photo", user.URL_PHOTO }
             };
 
             return param;

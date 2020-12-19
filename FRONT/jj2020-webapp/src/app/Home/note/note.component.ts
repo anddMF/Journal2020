@@ -1,7 +1,6 @@
 import { Note } from 'src/app/_models/note.model';
 import { Component, OnInit, Input } from '@angular/core';
 import { NotesService } from 'src/app/_services/notes/notes.service';
-import { NoteType } from 'src/app/_models/css-class.model';
 
 @Component({
   selector: 'app-note',

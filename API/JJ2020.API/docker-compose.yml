@@ -1,0 +1,42 @@
+version: '3.4'
+
+services:
+  jj2020api:
+    image: jj2020api
+    build:
+      context: .
+      dockerfile: JJ2020.API/Dockerfile
+    ports:
+      - 80
+    depends_on: 
+      - "db"
+      - "jj2020bll"
+  jj2020infra:
+    image: jj2020infra
+    build: 
+      context: .
+      dockerfile: JJ2020.INFRA/Dockerfile
+  jj2020bll:
+    image: jj2020bll
+    build:
+      context: .
+      dockerfile: JJ2020.BLL/Dockerfile
+    depends_on: 
+      - "jj2020infra"
+      - "jj2020domain"
+  jj2020domain:
+    image: jj2020domain
+    build: 
+      context: .
+      dockerfile: JJ2020.BLL/Dockerfile
+    depends_on: 
+      - "jj2020infra"
+  db:
+    image: mysql:latest
+    ports:
+      - 8083:3306
+    volumes:
+      - ./assets/database:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: pwd
+      MYSQL_DATABASE: mysql

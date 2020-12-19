@@ -3,8 +3,6 @@ C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\bin\Debug\netcor
 C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\bin\Debug\netcoreapp2.1\JJ2020.INFRA.pdb
 C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\bin\Debug\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Configuration.Abstractions.xml
-C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\bin\Debug\netcoreapp2.1\System.Data.SqlClient.xml
 C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\obj\Debug\netcoreapp2.1\JJ2020.INFRA.csprojAssemblyReference.cache
 C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\obj\Debug\netcoreapp2.1\JJ2020.INFRA.csproj.CoreCompileInputs.cache
 C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\obj\Debug\netcoreapp2.1\JJ2020.INFRA.AssemblyInfoInputs.cache

@@ -80,19 +80,15 @@ namespace JJ2020.BLL.Services
             {
                 case "Int32":
                     return 0;
-                    break;
 
                 case "String":
                     return "";
-                    break;
 
                 case "DateTime":
                     return null;
-                    break;
 
                 case "Boolean":
                     return false;
-                    break;
 
                 default:
                     return null;

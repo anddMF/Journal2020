@@ -1,0 +1,10 @@
+C:\app\build\JJ2020.INFRA.deps.json
+C:\app\build\JJ2020.INFRA.dll
+C:\app\build\JJ2020.INFRA.pdb
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\obj\Release\netcoreapp2.1\JJ2020.INFRA.csprojAssemblyReference.cache
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\obj\Release\netcoreapp2.1\JJ2020.INFRA.csproj.CoreCompileInputs.cache
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\obj\Release\netcoreapp2.1\JJ2020.INFRA.AssemblyInfoInputs.cache
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\obj\Release\netcoreapp2.1\JJ2020.INFRA.AssemblyInfo.cs
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\obj\Release\netcoreapp2.1\JJ2020.INFRA.csproj.CopyComplete
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\obj\Release\netcoreapp2.1\JJ2020.INFRA.dll
+C:\Users\andrew\source\repos\JJ2020\API\JJ2020.API\JJ2020.INFRA\obj\Release\netcoreapp2.1\JJ2020.INFRA.pdb

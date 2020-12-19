@@ -1,7 +1,6 @@
+import { environment } from './../../../environments/environment.prod';
 import { Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
-
-import { BaseService } from './../base/base.service';
 
 import { Note } from 'src/app/_models/note.model';
 import { map, tap, catchError, retry } from 'rxjs/operators';
@@ -24,13 +23,11 @@ export class NotesService {
   getNotes(): Observable<Note[]> {
     console.log('TEI')
 
-    return this.http.get<Note[]>('https://localhost:44368/api/Notes?id_user=3').pipe(
+    return this.http.get<Note[]>(`${environment.apiRootUrl}/api/Notes?id_user=3`).pipe(
       retry(2),
       tap(_ => console.log('GET')),
       catchError(this.handleError<any>('getNotes'))
     )
-
-    // return  this.listNotes;
   }
 
   getSingleNotes() {
@@ -39,7 +36,7 @@ export class NotesService {
 
   updateNote(note: Note): Observable<any> {
     console.log('chegou update')
-    const url = `https://localhost:44368/notes/${note.id}`;
+    const url = `${environment.apiRootUrl}/notes/${note.id}`;
      return this.http.put(url, JSON.stringify(note), this.httpOptions).pipe(
        retry(1),
        tap(_ => console.log('update')),
@@ -48,7 +45,7 @@ export class NotesService {
   }
 
   postNote(note: Note) {
-    return this.http.post('https://localhost:44368/api/Notes', note, this.httpOptions)
+    return this.http.post(`${environment.apiRootUrl}/api/notes`, note, this.httpOptions)
     .pipe(
       tap(_ => console.log('post post')),
       catchError(this.handleError<any>('postNote'))

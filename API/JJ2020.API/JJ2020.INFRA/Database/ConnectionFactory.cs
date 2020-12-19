@@ -1,16 +1,19 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+//using System.Data;
+//using System.Data.Common;
+//using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+using System.Text;
 using System.Data;
 using System.Data.Common;
-using System.Data.SqlClient;
-using System.Text;
 
 namespace JJ2020.INFRA.Database
 {
     public class ConnectionFactory
     {
-        private SqlConnection Connection;
+        private MySqlConnection Connection;
         private IConfiguration config;
         private string connString;
 
@@ -20,11 +23,11 @@ namespace JJ2020.INFRA.Database
             connString = config.GetConnectionString("SQLdb");
         }
 
-        private DbConnection GetConnection()
+        private MySqlConnection GetConnection()
         {
 
             if (Connection == null)
-                Connection = new SqlConnection(connString);
+                Connection = new MySqlConnection(connString);
 
             if (Connection.State != ConnectionState.Open)
                 Connection.Open();
@@ -32,9 +35,8 @@ namespace JJ2020.INFRA.Database
             return Connection;
         }
 
-        public DbCommand GetCommand()
+        public MySqlCommand GetCommand()
         {
-            //return GetConnection().CreateCommand();
             return GetConnection().CreateCommand();
         }
 
@@ -62,6 +64,10 @@ namespace JJ2020.INFRA.Database
                         var parameter = cmd.CreateParameter();
                         parameter.ParameterName = pr.Key;
                         parameter.Value = pr.Value;
+                        if (pr.Value != null && pr.Value.GetType().Name == "Boolean")
+                        {
+                            parameter.MySqlDbType = MySqlDbType.Bit;
+                        }
                         cmd.Parameters.Add(parameter);
                     }
                 }
@@ -76,6 +82,7 @@ namespace JJ2020.INFRA.Database
         {
             try
             {
+                
                 using (var cmd = this.GetCommand())
                 {
                     cmd.CommandText = cmdText;
@@ -88,6 +95,10 @@ namespace JJ2020.INFRA.Database
                             var parameter = cmd.CreateParameter();
                             parameter.ParameterName = pr.Key;
                             parameter.Value = pr.Value;
+                            if (pr.Value != null && pr.Value.GetType().Name == "Boolean")
+                            {
+                                parameter.MySqlDbType = MySqlDbType.Bit;
+                            }
                             cmd.Parameters.Add(parameter);
                         }
                     }
@@ -120,6 +131,11 @@ namespace JJ2020.INFRA.Database
                             var parameter = cmd.CreateParameter();
                             parameter.ParameterName = pr.Key;
                             parameter.Value = pr.Value;
+                            
+                            if (pr.Value != null && pr.Value.GetType().Name == "Boolean")
+                            {
+                                parameter.MySqlDbType = MySqlDbType.Bit;
+                            }
                             cmd.Parameters.Add(parameter);
                         }
                     }

@@ -41,8 +41,8 @@ namespace JJ2020.BLL.Services
         {
             var param = new Dictionary<string, object>
             {
-                { "@id_user", id_user},
-                { "@id", 0 }
+                { "pid_user", id_user},
+                { "pid", 0 }
             };
 
             return param;
@@ -50,24 +50,25 @@ namespace JJ2020.BLL.Services
 
         private Dictionary<string, object> PrepParamPost(Note note)
         {
-
+            var active = Convert.ToBoolean(note.ACTIVE);
+            var favorite = Convert.ToBoolean(note.FAVORITE);
             var param = new Dictionary<string, object>
             {
-                { "@id", note.ID },
-                { "@id_user", note.ID_USER },
-                { "@title", note.TITLE },
-                { "@note_text", note.NOTE_TEXT },
-                { "@active", note.ACTIVE },
-                { "@favorite", note.FAVORITE },
-                { "@tag", note.TAG },
-                { "@dt_creation", note.ID == 0 ? DateTime.Now : note.DT_CREATION },
-                { "@dt_edit", DateTime.Now }
+                { "Pid", note.ID },
+                { "Pid_user", note.ID_USER },
+                { "Ptitle", note.TITLE == "" ? null : note.TITLE },
+                { "Pnote_text", note.NOTE_TEXT == "" ? null : note.NOTE_TEXT},
+                { "Pactive", active },
+                { "Pfavorite", favorite },
+                { "Ptag", note.TAG == "" ? null : note.TAG },
+                { "Pdt_creation", note.ID == 0 ? DateTime.Now : note.DT_CREATION },
+                { "Pdt_edit", DateTime.Now }
             };
 
             if (note.ID_USER_SHARED == 0)
-                param.Add("@id_user_shared", null);
+                param.Add("Pid_user_shared", null);
             else
-                param.Add("@id_user_shared", note.ID_USER_SHARED);
+                param.Add("Pid_user_shared", note.ID_USER_SHARED);
             
             return param;
         }

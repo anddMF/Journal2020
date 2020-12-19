@@ -63,7 +63,8 @@ export class NoteEditComponent implements OnInit {
   }
 
   onClick() {
-    const fileUpload = this.fileUpload.nativeElement; fileUpload.onchange = () => {
+    const fileUpload = this.fileUpload.nativeElement; 
+    fileUpload.onchange = () => {
       for (let index = 0; index < fileUpload.files.length; index++) {
         const file = fileUpload.files[index];
         this.files.push({ data: file, inProgress: false, progress: 0 });
